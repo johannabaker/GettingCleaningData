@@ -91,5 +91,5 @@ names(messydata)[2] = "activity"   #returns to original name (activity)
   #  Writes tidy data set to a text file called tidydata.txt
 
 tidydata <- summarise_each(group_by(messydata, subject, activity), funs(mean))
-write.table(tidydata, file="tidydata.txt")
+write.table(tidydata, file="tidydata.txt", row.names = FALSE)
 
